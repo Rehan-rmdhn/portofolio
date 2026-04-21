@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehan Ramadhansyah - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left-group">
+                <div class="logo">
+                    <span class="logo-circle">O</span>
+                    Rehan Ramadhansyah<span class="dot">.</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </div>
+            <div class="nav-right-group">
+                <button id="night-mode-toggle" class="btn-night" title="Toggle Night Mode">🌙</button>
+                <button class="btn-contact">Contact Me</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hello-badge">
+                    <span class="dot-corner tl"></span><span class="dot-corner tr"></span>
+                    Hello There!
+                    <span class="dot-corner bl"></span><span class="dot-corner br"></span>
+                </div>
+                <h1>Aku <span class="highlight">Rehan,</span><br>Pelajar<br>Di SMKN 1 Bondowoso</h1>
+                <p>Aku siswa RPL kelas 11 yang sedang mendalami dunia Web Design dan Coding. Fokus belajar membangun jembatan antara baris kode dan pengalaman pengguna.</p>
+
+                <div class="hero-btns">
+                    <button class="btn-portfolio">
+                        View My Portfolio <span class="play-icon">▶</span>
+                    </button>
+                    <button class="btn-hire">Hire Me</button>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="yellow-blob"></div>
+                <img src="https://via.placeholder.com/500x650" alt="Rehan Ramadhansyah" class="main-photo">
+
+                <div class="floating-label label-product">
+                    <span class="arrow">➤</span> Web Designer
+                </div>
+
+                <div class="hire-me-circle">
+                    <div class="circle-text">
+                        <svg viewBox="0 0 100 100">
+                            <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                            <text>
+                                <textPath href="#circlePath">★HIRE ME★ HIRE ME ★HIRE ME ★HIRE </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="circle-arrow">↗</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="rh-about-section">
+        <div class="rh-about-container">
+            <div class="rh-about-visual">
+                <div class="rh-circle-bg">
+                    <!-- <img src="img/naurxzi_.jpg" alt="Rehan" class="rh-photo"> -->
+                    <div class="rh-tag rt-1">UX/UI Design</div>
+                    <div class="rh-tag rt-2">Mobile App Design</div>
+                    <div class="rh-tag rt-3">Website Design</div>
+                    <div class="rh-tag rt-4">Design System</div>
+                    <div class="rh-tag rt-5">Prototype</div>
+                    <div class="rh-tag rt-6">Dashboard</div>
+                    <div class="rh-tag rt-7">Wireframe Design</div>
+                </div>
+            </div>
+
+            <div class="rh-about-text-content">
+                <span class="rh-sub">— About Me</span>
+                <h2 class="rh-title">Who is <span class="rh-highlight">Rehan Ramadhansyah?</span></h2>
+                <p class="rh-desc">
+                    Saya adalah siswa RPL kelas 11 di SMKN 1 Bondowoso. Saya fokus pada pembuatan desain antarmuka yang bersih dan fungsional, menggabungkan logika pemrograman dengan estetika visual.
+                </p>
+
+                <div class="rh-stats">
+                    <div class="rh-stat-box">
+                        <h3>10+</h3>
+                        <p>Project Completed</p>
+                    </div>
+                    <div class="rh-stat-box">
+                        <h3>5+</h3>
+                        <p>Skills Covered</p>
+                    </div>
+                    <div class="rh-stat-box">
+                        <h3>2+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+
+                <div class="rh-footer-about">
+                    <a href="#" class="rh-btn-cv">
+                        Download CV 
+                        <span class="rh-arrow">→</span>
+                    </a>
+                    <span class="rh-signature">Rehan Ramadhansyah</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="running-text">
+        <div class="ticker">
+            <span>App Design</span> <span>✳</span>
+            <span>Website Design</span> <span>✳</span>
+            <span>Dashboard</span> <span>✳</span>
+            <span>Wireframe</span> <span>✳</span>
+            <span>App Design</span> <span>✳</span>
+            <span>Website Design</span> <span>✳</span>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('night-mode-toggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('night-mode');
+            toggleBtn.textContent = '☀️';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('night-mode');
+            if (body.classList.contains('night-mode')) {
+                toggleBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                toggleBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
